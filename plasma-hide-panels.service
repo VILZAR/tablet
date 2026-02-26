@@ -1,0 +1,13 @@
+[Unit]
+Description=Hide Plasma Mobile top and bottom panels after login
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+Type=oneshot
+ExecStartPre=/usr/bin/sleep 6
+ExecStart=%h/.local/bin/plasma-hide-panels.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=graphical-session.target
