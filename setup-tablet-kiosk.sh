@@ -105,7 +105,7 @@ mkdir -p "$(dirname "$WRAPPER")"
 cat > "$WRAPPER" << EOF
 #!/bin/sh
 sleep 5
-exec $CHROMIUM_EXEC --no-sandbox --disable-gpu --disable-software-rasterizer --kiosk --start-fullscreen --disable-pinch --noerrdialogs --disable-infobars --no-first-run --disable-features=OverscrollHistoryNavigation "http://10.1.0.194:3000"
+exec $CHROMIUM_EXEC --no-sandbox --disable-gpu --disable-software-rasterizer --kiosk --start-fullscreen --disable-pinch --noerrdialogs --disable-infobars --no-first-run --disable-features=OverscrollHistoryNavigation "https://statosphera.ru/foodcord-terminal"
 EOF
 chmod +x "$WRAPPER"
 mkdir -p "$AUTOSTART_DIR"
